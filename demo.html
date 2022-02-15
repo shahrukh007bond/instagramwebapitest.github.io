@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+
+.listone
+{
+    list-style: none;
+}
+
+.listone li
+{
+    width: 50%;
+    height: 300px;
+    background-color: aqua;
+    float: left;
+}
+
+</style>
+
+<script>
+
+// HTTP/1.1 200 OK
+// Date: Wed, 01 Mar 2011 15:38:19 GMT
+// Access-Control-Allow-Origin: http://DomainA.com
+// Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+// Access-Control-Allow-Headers: X-Requested-With
+// Access-Control-Max-Age: 1728000
+// Connection: Keep-Alive
+// Content-Type: application/json
+
+ // First create an XMLHttprequest object
+
+
+// Ajax config
+// $.ajax({
+// 	        type: "GET", //we are using GET method to get data from server side
+// 	        url: 'reponse.php', // get the route value
+//             headers:{
+//                 Accept:"application/json",
+//                 "Content-type":"application/json",
+
+//             },
+// 	        success: function (response) {//once the request successfully process to the server side it will return result here
+	           
+               
+
+              
+
+// console.log(response);
+//                 // let jsonData = JSON.stringify(response);
+                        
+//                 // console.log(JSON.parse(jsonData));
+                
+
+    
+// 	        }
+// 	    });
+
+
+
+
+ const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://www.instagram.com/explore/tags/upelections/?__a=1", true);
+    xhr.getResponseHeader("Content-type", "application/json");
+  
+    xhr.onload = function() {
+        const obj = JSON.parse(this.responseText);
+
+        console.log(obj);
+        
+    }
+  
+    xhr.send();
+
+
+
+
+
+</script>
+</body>
+</html>
