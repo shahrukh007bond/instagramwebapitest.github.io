@@ -67,7 +67,10 @@
  const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://www.instagram.com/explore/tags/upelections/?__a=1", true);
     xhr.getResponseHeader("Content-type", "application/json");
+    
     xhr.getResponseHeader('Access-Control-Allow-Headers', '*');
+    xhr.getResponseHeader('Content-type', 'application/ecmascript');
+    xhr.getResponseHeader('Access-Control-Allow-Origin', '*');
 
   
     xhr.onload = function() {
